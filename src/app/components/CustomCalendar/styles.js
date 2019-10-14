@@ -1,4 +1,3 @@
-import {StyleSheet} from 'react-native';
 import {mirage, catedBlue, gallery, white, bombay, outerSpace} from '@constants/colors';
 import {refRatioScale, isIos} from '@constants/platform';
 import {fontSizes, fontWeights, Roboto, fontCera} from '@constants/fonts';
@@ -21,11 +20,6 @@ export const myTheme = {
       alignItems: 'center',
       alignSelf: 'stretch',
       paddingBottom: refRatioScale(10),
-    },
-    base: {
-      width: SIZE_CIRCLE,
-      alignItems: 'center',
-      height: SIZE_CIRCLE,
     },
     text: {
       marginTop: isIos ? MARGIN_PADDING : MARGIN_HALF_PADDING,
@@ -89,11 +83,3 @@ export const myTheme = {
     },
   },
 };
-
-const styles = StyleSheet.create({
-  title: {
-    marginBottom: ZERO,
-  },
-});
-
-export default styles;
