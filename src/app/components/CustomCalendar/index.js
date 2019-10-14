@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import PropTypes from 'prop-types';
 import {Image} from 'react-native';
-import {cerulean, white} from '@constants/colors';
+import {cerulean, white, bombay, malibu, lilyWhite} from '@constants/colors';
 import moment from 'moment';
-import nextImg from '@assets/next.png';
-
-import prevImg from '../../../assets/previous.png';
+import nextImg from '@assets/right.png';
+import prevImg from '@assets/left.png';
 
 import {DEFAULT_LOCALE, CONFIG_CALENDAR, FORMAT_DATE, PERIOD, VARIABLES} from './constants';
 import {myTheme} from './styles';
@@ -31,7 +30,14 @@ class CustomCalendar extends Component {
   handleInitialDate = () => {
     const {initialDate} = this.state;
     const daysSelected = {
-      [initialDate]: {startingDay: true, endingDay: true, selected: true, color: '#333', textColor: white},
+      [initialDate]: {
+        customStyles: {container: {backgroundColor: 'blue'}},
+        startingDay: true,
+        endingDay: true,
+        selected: true,
+        color: malibu,
+        textColor: white,
+      },
     };
     this.setState({daysSelected});
   };
@@ -47,7 +53,7 @@ class CustomCalendar extends Component {
         currentDate = moment(currentDate || initialDate)
           .add(1, VARIABLES.days)
           .format(FORMAT_DATE);
-        daysSelected[currentDate] = {selected: true, color: cerulean};
+        daysSelected[currentDate] = {selected: true, color: lilyWhite, textColor: malibu};
       }
       daysSelected[finalDate] = {endingDay: true, color: cerulean, textColor: white};
       this.setState({daysSelected});
@@ -61,7 +67,13 @@ class CustomCalendar extends Component {
   };
 
   renderArrow = direction => {
-    <Image resizeMode="contain" source={direction === VARIABLES.left ? prevImg : nextImg} />;
+    return (
+      <Image
+        style={{tintColor: bombay}}
+        resizeMode="contain"
+        source={direction === VARIABLES.left ? prevImg : nextImg}
+      />
+    );
   };
 
   render() {
@@ -72,14 +84,14 @@ class CustomCalendar extends Component {
         markedDates={daysSelected}
         markingType={PERIOD}
         theme={myTheme}
-        renderArrow={this.renderArrow()}
+        renderArrow={this.renderArrow}
       />
     );
   }
 }
 
 CustomCalendar.propTypes = {
-  onAcceptDate: PropTypes.func.isRequired,
+  onAcceptDate: PropTypes.func,
 };
 
 export default CustomCalendar;

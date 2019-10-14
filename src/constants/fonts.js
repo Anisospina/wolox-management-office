@@ -29,6 +29,21 @@ export const fontSizes = {
   XXBIG: refRatioScale(42),
 };
 
+export const fontCera = {
+  BLACK: 'CeraPro-Black',
+  BLACK_ITALIC: 'CeraPro-BlackItalic',
+  BOLD: 'CeraPro-Bold',
+  BOLD_ITALIC: 'CeraPro-BoldItalic',
+  ITALIC: 'CeraPro-Italic',
+  LIGHT: 'CeraPro-Light',
+  LIGHT_ITALIC: 'CeraPro-LightItalic',
+  MEDIUM: 'CeraPro-Medium',
+  MEDIUM_ITALIC: 'CeraPro-MediumItalic',
+  REGULAR: 'CeraPro-Regular',
+  THIN: 'CeraPro-Thin',
+  THIN_ITALIC: 'CeraPro-ThinItalic',
+};
+
 export const fontWeights = {
   LIGHT: '300',
   SEMI_BOLD: '500',

@@ -9,6 +9,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: aquaHaze,
   },
+  text: {
+    fontFamily: 'CeraPro-Regular',
+  },
   formElementContainer: {
     backgroundColor: transparent,
     borderBottomColor: blue,
@@ -21,8 +24,6 @@ export default StyleSheet.create({
   },
   formElement: {
     padding: 3,
-    // margin: 5,
-    // backgroundColor: transparent,
     height: 30,
     width: 200,
   },

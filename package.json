@@ -97,5 +97,10 @@
     "transformIgnorePatterns": [
       "/node_modules/@react-native-community/async-storage/(?!(lib))"
     ]
+  },
+  "rnpm":{
+    "assets": [
+      "assets/fonts"
+    ]
   }
 }

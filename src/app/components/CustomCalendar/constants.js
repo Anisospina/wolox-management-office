@@ -32,5 +32,5 @@ export const VARIABLES = {
   left: 'left',
 };
 export const PERIOD = 'period';
-export const FORMAT_DATE = 'YY-MM-DD';
+export const FORMAT_DATE = 'YYYY-MM-DD';
 export const DEFAULT_LOCALE = 'en';

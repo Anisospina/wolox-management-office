@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* woloxManagementOfficeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* woloxManagementOfficeTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -20,6 +19,18 @@
 		BF4B568B355B05C9AFA7D7EE /* libPods-woloxManagementOffice-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4986D044D801001764278802 /* libPods-woloxManagementOffice-tvOSTests.a */; };
 		E731F034AD9664F19F935331 /* libPods-woloxManagementOffice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0342A282251105FA44F77E /* libPods-woloxManagementOffice.a */; };
 		EE8210DAC55EBAB5661EB35F /* libPods-woloxManagementOfficeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B587A3C5B19D2EFFCF003D /* libPods-woloxManagementOfficeTests.a */; };
+		F61C39E4A79B430DA051FD63 /* CeraPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 816B8CAA48104552B0D3FEA3 /* CeraPro-Black.ttf */; };
+		B7425B6105034F5D975F742A /* CeraPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E9F4A0837A4E2D802D55A3 /* CeraPro-BlackItalic.ttf */; };
+		155E3CAC665D4B6B9F34A7C7 /* CeraPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8BCF38EECDE4616804111B9 /* CeraPro-Bold.ttf */; };
+		97BADA5FFBCB4B70B2884241 /* CeraPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58F4058842194894B8279C92 /* CeraPro-BoldItalic.ttf */; };
+		386B7E9BAE8F4921A409C511 /* CeraPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92042EB45DA045178E44E6FB /* CeraPro-Italic.ttf */; };
+		A2A3A4B882F94272A4F63BA5 /* CeraPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29706DDFA4ED4411A7177E6A /* CeraPro-Light.ttf */; };
+		ACF38999461342F3B8377C24 /* CeraPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73F4B0E735434F1E8B38F7D2 /* CeraPro-LightItalic.ttf */; };
+		544FFE539E95432EB51F2DAD /* CeraPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A05592313F4AC1BA7E0AEE /* CeraPro-Medium.ttf */; };
+		CE992C765EEE44148646ACBC /* CeraPro-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 155B1FCE1D53465AA38B286B /* CeraPro-MediumItalic.ttf */; };
+		46E089BDB317418D9893B2FB /* CeraPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3532F9000E12450BA309A614 /* CeraPro-Regular.ttf */; };
+		1B3C557B53494FE49F37CCEA /* CeraPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF3AF48AE243478288704DC7 /* CeraPro-Thin.ttf */; };
+		9C84F6D69F794D4D81FB3E1C /* CeraPro-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F589679E2F64F88AAFD21AB /* CeraPro-ThinItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +78,18 @@
 		D37ECAC0D514FFFA2B61B02E /* Pods-woloxManagementOffice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-woloxManagementOffice.debug.xcconfig"; path = "Target Support Files/Pods-woloxManagementOffice/Pods-woloxManagementOffice.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		816B8CAA48104552B0D3FEA3 /* CeraPro-Black.ttf */ = {isa = PBXFileReference; name = "CeraPro-Black.ttf"; path = "../assets/fonts/CeraPro-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83E9F4A0837A4E2D802D55A3 /* CeraPro-BlackItalic.ttf */ = {isa = PBXFileReference; name = "CeraPro-BlackItalic.ttf"; path = "../assets/fonts/CeraPro-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8BCF38EECDE4616804111B9 /* CeraPro-Bold.ttf */ = {isa = PBXFileReference; name = "CeraPro-Bold.ttf"; path = "../assets/fonts/CeraPro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58F4058842194894B8279C92 /* CeraPro-BoldItalic.ttf */ = {isa = PBXFileReference; name = "CeraPro-BoldItalic.ttf"; path = "../assets/fonts/CeraPro-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		92042EB45DA045178E44E6FB /* CeraPro-Italic.ttf */ = {isa = PBXFileReference; name = "CeraPro-Italic.ttf"; path = "../assets/fonts/CeraPro-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		29706DDFA4ED4411A7177E6A /* CeraPro-Light.ttf */ = {isa = PBXFileReference; name = "CeraPro-Light.ttf"; path = "../assets/fonts/CeraPro-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		73F4B0E735434F1E8B38F7D2 /* CeraPro-LightItalic.ttf */ = {isa = PBXFileReference; name = "CeraPro-LightItalic.ttf"; path = "../assets/fonts/CeraPro-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96A05592313F4AC1BA7E0AEE /* CeraPro-Medium.ttf */ = {isa = PBXFileReference; name = "CeraPro-Medium.ttf"; path = "../assets/fonts/CeraPro-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		155B1FCE1D53465AA38B286B /* CeraPro-MediumItalic.ttf */ = {isa = PBXFileReference; name = "CeraPro-MediumItalic.ttf"; path = "../assets/fonts/CeraPro-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3532F9000E12450BA309A614 /* CeraPro-Regular.ttf */ = {isa = PBXFileReference; name = "CeraPro-Regular.ttf"; path = "../assets/fonts/CeraPro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF3AF48AE243478288704DC7 /* CeraPro-Thin.ttf */ = {isa = PBXFileReference; name = "CeraPro-Thin.ttf"; path = "../assets/fonts/CeraPro-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F589679E2F64F88AAFD21AB /* CeraPro-ThinItalic.ttf */ = {isa = PBXFileReference; name = "CeraPro-ThinItalic.ttf"; path = "../assets/fonts/CeraPro-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +188,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				B9D64813E56BA0EEEDE4383C /* Pods */,
+				23E39A97187A45EEB51DF096 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +221,26 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		23E39A97187A45EEB51DF096 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				816B8CAA48104552B0D3FEA3 /* CeraPro-Black.ttf */,
+				83E9F4A0837A4E2D802D55A3 /* CeraPro-BlackItalic.ttf */,
+				E8BCF38EECDE4616804111B9 /* CeraPro-Bold.ttf */,
+				58F4058842194894B8279C92 /* CeraPro-BoldItalic.ttf */,
+				92042EB45DA045178E44E6FB /* CeraPro-Italic.ttf */,
+				29706DDFA4ED4411A7177E6A /* CeraPro-Light.ttf */,
+				73F4B0E735434F1E8B38F7D2 /* CeraPro-LightItalic.ttf */,
+				96A05592313F4AC1BA7E0AEE /* CeraPro-Medium.ttf */,
+				155B1FCE1D53465AA38B286B /* CeraPro-MediumItalic.ttf */,
+				3532F9000E12450BA309A614 /* CeraPro-Regular.ttf */,
+				AF3AF48AE243478288704DC7 /* CeraPro-Thin.ttf */,
+				3F589679E2F64F88AAFD21AB /* CeraPro-ThinItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +329,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +382,18 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F61C39E4A79B430DA051FD63 /* CeraPro-Black.ttf in Resources */,
+				B7425B6105034F5D975F742A /* CeraPro-BlackItalic.ttf in Resources */,
+				155E3CAC665D4B6B9F34A7C7 /* CeraPro-Bold.ttf in Resources */,
+				97BADA5FFBCB4B70B2884241 /* CeraPro-BoldItalic.ttf in Resources */,
+				386B7E9BAE8F4921A409C511 /* CeraPro-Italic.ttf in Resources */,
+				A2A3A4B882F94272A4F63BA5 /* CeraPro-Light.ttf in Resources */,
+				ACF38999461342F3B8377C24 /* CeraPro-LightItalic.ttf in Resources */,
+				544FFE539E95432EB51F2DAD /* CeraPro-Medium.ttf in Resources */,
+				CE992C765EEE44148646ACBC /* CeraPro-MediumItalic.ttf in Resources */,
+				46E089BDB317418D9893B2FB /* CeraPro-Regular.ttf in Resources */,
+				1B3C557B53494FE49F37CCEA /* CeraPro-Thin.ttf in Resources */,
+				9C84F6D69F794D4D81FB3E1C /* CeraPro-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

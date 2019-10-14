@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {mirage, catedBlue, gallery, white} from '@constants/colors';
+import {mirage, catedBlue, gallery, white, bombay, outerSpace} from '@constants/colors';
 import {refRatioScale, isIos} from '@constants/platform';
-import {fontSizes, fontWeights, Roboto} from '@constants/fonts';
+import {fontSizes, fontWeights, Roboto, fontCera} from '@constants/fonts';
 import {
   MARGIN_HALF_PADDING,
   MARGIN_PADDING_12,
@@ -11,10 +11,11 @@ import {
 
 const SIZE_CIRCLE = isIos ? refRatioScale(34) : MARGIN_PADDING_TRIPLE;
 const ZERO = refRatioScale(0);
-const ONE = refRatioScale(1);
 
 export const myTheme = {
   calendarBackground: 'transparent',
+  textDisabledColor: bombay,
+  todayTextColor: '#00adf5',
   'stylesheet.day.period': {
     wrapper: {
       alignItems: 'center',
@@ -29,26 +30,11 @@ export const myTheme = {
     text: {
       marginTop: isIos ? MARGIN_PADDING : MARGIN_HALF_PADDING,
       fontSize: fontSizes.SMALL,
-      fontFamily: Roboto,
+      fontFamily: fontCera.REGULAR,
       fontWeight: fontWeights.NORMAL,
       color: mirage,
       marginBottom: ZERO,
       paddingBottom: isIos ? ZERO : MARGIN_HALF_PADDING,
-    },
-    fillers: {
-      position: 'absolute',
-      height: SIZE_CIRCLE,
-      flexDirection: 'row',
-      left: ZERO,
-      right: ZERO,
-    },
-    leftFiller: {
-      height: SIZE_CIRCLE,
-      flex: ONE,
-    },
-    rightFiller: {
-      height: SIZE_CIRCLE,
-      flex: ONE,
     },
   },
   'stylesheet.calendar.main': {
@@ -84,21 +70,21 @@ export const myTheme = {
       color: catedBlue,
       fontSize: fontSizes.XSMALL,
       textAlign: 'center',
-      fontFamily: Roboto,
+      fontFamily: fontCera.REGULAR,
       fontWeight: fontWeights.SEMI_BOLD,
     },
     monthText: {
       fontSize: fontSizes.MEDIUM,
       fontFamily: Roboto,
-      fontWeight: fontWeights.BOLD,
-      color: mirage,
+      fontWeight: fontWeights.SEMI_BOLD,
+      color: outerSpace,
       margin: ZERO,
+      padding: 0,
     },
     header: {
       flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingTop: refRatioScale(10),
-      paddingBottom: refRatioScale(10),
+      justifyContent: 'space-around',
+      paddingVertical: refRatioScale(5),
       alignItems: 'center',
     },
   },
