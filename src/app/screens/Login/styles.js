@@ -1,28 +1,35 @@
-import { StyleSheet } from 'react-native';
-import { green, blue, transparent } from '@constants/colors';
+import {StyleSheet} from 'react-native';
+import {green, blue, transparent, aquaHaze} from '@constants/colors';
+import {refRatioScale} from '@constants/platform';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: aquaHaze,
   },
   formElementContainer: {
     backgroundColor: transparent,
     borderBottomColor: blue,
-    borderBottomWidth: 1
+    borderBottomWidth: 1,
+  },
+  calendar: {
+    paddingHorizontal: refRatioScale(30),
+    backgroundColor: aquaHaze,
+    borderRadius: refRatioScale(10),
   },
   formElement: {
     padding: 3,
-    margin: 5,
-    backgroundColor: transparent,
+    // margin: 5,
+    // backgroundColor: transparent,
     height: 30,
-    width: 200
+    width: 200,
   },
   formButton: {
     backgroundColor: green,
     padding: 10,
     borderRadius: 3,
-    margin: 20
-  }
+    margin: 20,
+  },
 });

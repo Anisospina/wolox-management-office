@@ -2,7 +2,7 @@ import {buildTranslations, buildConstants} from '@utils/i18nUtils';
 
 const namespace = 'calendarModalFilter';
 const translations = {
-  es: {
+  en: {
     january: 'Enero',
     febrary: 'Febrero',
     march: 'Marzo',
@@ -27,5 +27,5 @@ const translations = {
   },
 };
 
-export const strings = buildConstants(translations, namespace, 'es');
+export const strings = buildConstants(translations, namespace, 'en');
 export default buildTranslations(translations, namespace);

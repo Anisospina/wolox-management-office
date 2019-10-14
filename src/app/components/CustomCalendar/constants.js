@@ -2,18 +2,18 @@ import {strings} from './i18n';
 
 export const CONFIG_CALENDAR = {
   monthNames: [
-    strings.JANUARY(),
-    strings.FEBRARY(),
-    strings.MARCH(),
-    strings.APRIL(),
-    strings.MAY(),
-    strings.JUNE(),
-    strings.JULY(),
-    strings.AUGUST(),
-    strings.SEPTEMBER(),
-    strings.OCTOBER(),
-    strings.NOVEMBER(),
-    strings.DECEMBER(),
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
   ],
   dayNames: [
     strings.SUNDAY(),
@@ -32,5 +32,5 @@ export const VARIABLES = {
   left: 'left',
 };
 export const PERIOD = 'period';
-export const FORMAT_DATE = 'YYYY-MM-DD';
-export const DEFAULT_LOCALE = 'ES';
+export const FORMAT_DATE = 'YY-MM-DD';
+export const DEFAULT_LOCALE = 'en';

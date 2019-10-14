@@ -28,3 +28,10 @@ export const fontSizes = {
   XBIG: refRatioScale(36),
   XXBIG: refRatioScale(42),
 };
+
+export const fontWeights = {
+  LIGHT: '300',
+  SEMI_BOLD: '500',
+  NORMAL: 'normal',
+  BOLD: 'bold',
+};

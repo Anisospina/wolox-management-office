@@ -4,21 +4,17 @@ import PropTypes from 'prop-types';
 import {Image} from 'react-native';
 import {cerulean, white} from '@constants/colors';
 import moment from 'moment';
-import prevImg from '@assets/previous';
-import nextImg from '@assets/next';
+import nextImg from '@assets/next.png';
+
+import prevImg from '../../../assets/previous.png';
 
 import {DEFAULT_LOCALE, CONFIG_CALENDAR, FORMAT_DATE, PERIOD, VARIABLES} from './constants';
 import {myTheme} from './styles';
 
 LocaleConfig.locales[DEFAULT_LOCALE] = CONFIG_CALENDAR;
 LocaleConfig.defaultLocale = DEFAULT_LOCALE;
-
 class CustomCalendar extends Component {
-  state = {
-    initialDate: null,
-    finalDate: null,
-    daysSelected: null,
-  };
+  state = {initialDate: null, finalDate: null, daysSelected: null};
 
   handleClickModalFilter = day => {
     const {initialDate, finalDate} = this.state;
@@ -76,7 +72,7 @@ class CustomCalendar extends Component {
         markedDates={daysSelected}
         markingType={PERIOD}
         theme={myTheme}
-        renderArrow={this.renderArrow}
+        renderArrow={this.renderArrow()}
       />
     );
   }
