@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 import {green, blue, transparent, aquaHaze} from '@constants/colors';
-import {refRatioScale} from '@constants/platform';
 
 export default StyleSheet.create({
   container: {
@@ -9,18 +8,10 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: aquaHaze,
   },
-  text: {
-    fontFamily: 'CeraPro-Regular',
-  },
   formElementContainer: {
     backgroundColor: transparent,
     borderBottomColor: blue,
     borderBottomWidth: 1,
-  },
-  calendar: {
-    paddingHorizontal: refRatioScale(30),
-    backgroundColor: aquaHaze,
-    borderRadius: refRatioScale(10),
   },
   formElement: {
     padding: 3,

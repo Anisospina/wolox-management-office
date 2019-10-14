@@ -31,7 +31,6 @@ class CustomCalendar extends Component {
     const {initialDate} = this.state;
     const daysSelected = {
       [initialDate]: {
-        customStyles: {container: {backgroundColor: 'blue'}},
         startingDay: true,
         endingDay: true,
         selected: true,
