@@ -22,9 +22,7 @@ class CustomCalendar extends Component {
         {initialDate: day.dateString, finalDate: null, daysSelected: null},
         this.handleInitialDate,
       );
-    } else {
-      this.setState({finalDate: day.dateString, daysSelected: null}, this.calculateRange);
-    }
+    } else this.setState({finalDate: day.dateString, daysSelected: null}, this.calculateRange);
   };
 
   handleInitialDate = () => {
@@ -90,7 +88,7 @@ class CustomCalendar extends Component {
 }
 
 CustomCalendar.propTypes = {
-  onAcceptDate: PropTypes.func,
+  onAcceptDate: PropTypes.func.isRe,
 };
 
 export default CustomCalendar;
