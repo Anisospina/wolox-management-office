@@ -34,16 +34,16 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "no-nested-ternary": "off",
     "react/require-default-props": "off",
-    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".tsx"] }],
     "react/prop-types": [2, { ignore: ["style", "children", "dispatch"] } ],
     "import/order": ["error", {"newlines-between": "always"}],
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
     "import/extensions": ["error", { js: "never", "png": "always", "jpg": "always", "json": "always" }],
-    "import/named": "error",
-    "import/default": "error",
-    "import/namespace": "error",
-    "import/no-absolute-path": "error",
+    "import/named": "off",
+    "import/default": "off",
+    "import/namespace": "off",
+    "import/no-absolute-path": "off",
     "react/no-typos": "off"
   }
 };

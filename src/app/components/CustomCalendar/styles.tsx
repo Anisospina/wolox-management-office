@@ -1,12 +1,12 @@
 import {mirage, catedBlue, gallery, white, bombay, outerSpace} from '@constants/colors';
 import {refRatioScale, isIos} from '@constants/platform';
-import {fontSizes, fontWeights, Roboto, fontCera} from '@constants/fonts';
 import {
   MARGIN_HALF_PADDING,
   MARGIN_PADDING_12,
   MARGIN_PADDING_TRIPLE,
   MARGIN_PADDING,
 } from '@constants/dimensions';
+import {fontSizes, fontWeights, fontCera} from '@constants/fonts';
 
 const SIZE_CIRCLE = isIos ? refRatioScale(34) : MARGIN_PADDING_TRIPLE;
 const ZERO = refRatioScale(0);
@@ -69,7 +69,7 @@ export const myTheme = {
     },
     monthText: {
       fontSize: fontSizes.MEDIUM,
-      fontFamily: Roboto,
+      fontFamily: fontCera.REGULAR,
       fontWeight: fontWeights.SEMI_BOLD,
       color: outerSpace,
       margin: ZERO,

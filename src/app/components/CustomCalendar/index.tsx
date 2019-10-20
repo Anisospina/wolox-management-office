@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
 import {Calendar, LocaleConfig} from 'react-native-calendars';
-import PropTypes from 'prop-types';
 import {Image} from 'react-native';
-import {cerulean, white, bombay, malibu, lilyWhite} from '@constants/colors';
 import moment from 'moment';
+import {cerulean, white, bombay, malibu, lilyWhite} from '@constants/colors';
 import nextImg from '@assets/right.png';
 import prevImg from '@assets/left.png';
 
-import {DEFAULT_LOCALE, CONFIG_CALENDAR, FORMAT_DATE, PERIOD, VARIABLES} from './constants';
+import {Props, CalendarState} from './interfaceCalendar';
+import {DEFAULT_LOCALE, CONFIG_CALENDAR, FORMAT_DATE, PERIOD, VARIABLES, UNITS} from './constants';
 import {myTheme} from './styles';
 
 LocaleConfig.locales[DEFAULT_LOCALE] = CONFIG_CALENDAR;
 LocaleConfig.defaultLocale = DEFAULT_LOCALE;
-class CustomCalendar extends Component {
-  state = {initialDate: null, finalDate: null, daysSelected: null};
+
+class CustomCalendar extends Component<Props, CalendarState> {
+  state = {
+    initialDate: null,
+    finalDate: null,
+    daysSelected: null,
+  };
 
   handleClickModalFilter = day => {
     const {initialDate, finalDate} = this.state;
@@ -42,13 +47,14 @@ class CustomCalendar extends Component {
   calculateRange = () => {
     const {initialDate, finalDate} = this.state;
     if (initialDate && finalDate && finalDate > initialDate) {
-      const daysSelected = {
+      const daysSelected: any = {
         [initialDate]: {startingDay: true, color: cerulean, textColor: white},
       };
-      let currentDate;
+      let currentDate: string;
       while (currentDate !== finalDate) {
-        currentDate = moment(currentDate || initialDate)
-          .add(1, VARIABLES.days)
+        const date = currentDate || initialDate;
+        currentDate = moment(date)
+          .add(1, UNITS.days)
           .format(FORMAT_DATE);
         daysSelected[currentDate] = {selected: true, color: lilyWhite, textColor: malibu};
       }
@@ -75,6 +81,7 @@ class CustomCalendar extends Component {
 
   render() {
     const {daysSelected} = this.state;
+
     return (
       <Calendar
         onDayPress={this.handleClickModalFilter}
@@ -86,9 +93,5 @@ class CustomCalendar extends Component {
     );
   }
 }
-
-CustomCalendar.propTypes = {
-  onAcceptDate: PropTypes.func.isRe,
-};
 
 export default CustomCalendar;

@@ -1,0 +1,35 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+      "tslint-react", "tslint-react"
+  ],
+  "jsRules": {
+  },
+  "rules": {
+    "ordered-imports": true,
+    "trailing-comma": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "no-constant-condition": false,
+    "triple-equals": [true, "allow-undefined-check"],
+    "arrow-parens": false,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "object-literal-sort-keys": false,
+    "no-duplicate-imports": true,
+    "quotemark": false,
+    "no-console": false,
+    "jsx-no-lambda": false,
+    "react/jsx-child-element-spacing": false,
+    "import/order": ["error", {"newlines-between": "always"}],
+    "import/no-unresolved": "off"
+  },
+  "rulesDirectory": [
+  ],
+  "linterOptions": {
+      "exclude": [
+          "config/**/*.js",
+          "node_modules/**/*.ts",
+          "src/**/*.json"
+  ]
+}
+}
