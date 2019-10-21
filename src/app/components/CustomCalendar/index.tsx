@@ -3,8 +3,8 @@ import {Calendar, LocaleConfig} from 'react-native-calendars';
 import {Image} from 'react-native';
 import moment from 'moment';
 import {cerulean, white, bombay, malibu, lilyWhite} from '@constants/colors';
-import nextImg from '@assets/right.png';
 import prevImg from '@assets/left.png';
+import nextImg from '@assets/right.png';
 
 import {Props, CalendarState} from './interfaceCalendar';
 import {DEFAULT_LOCALE, CONFIG_CALENDAR, FORMAT_DATE, PERIOD, VARIABLES, UNITS} from './constants';
