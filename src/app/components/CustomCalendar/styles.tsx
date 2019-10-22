@@ -1,4 +1,13 @@
-import {MIRAGE, CATEDBLUE, GALLERY, WHITE, BOMBAY, OUTERSPACE, CERULEAN} from '@constants/colors';
+import {
+  MIRAGE,
+  CATEDBLUE,
+  GALLERY,
+  WHITE,
+  BOMBAY,
+  OUTERSPACE,
+  CERULEAN,
+  TRANSPARENT,
+} from '@constants/colors';
 import {refRatioScale, isIos} from '@constants/platform';
 import {
   MARGIN_HALF_PADDING,
@@ -12,7 +21,7 @@ const SIZE_CIRCLE = isIos ? refRatioScale(34) : MARGIN_PADDING_TRIPLE;
 const ZERO = refRatioScale(0);
 
 export const myTheme = {
-  calendarBackground: 'transparent',
+  calendarBackground: TRANSPARENT,
   textDisabledColor: BOMBAY,
   todayTextColor: CERULEAN,
   'stylesheet.day.period': {
@@ -73,7 +82,7 @@ export const myTheme = {
       fontWeight: fontWeights.SEMI_BOLD,
       color: OUTERSPACE,
       margin: ZERO,
-      padding: 0,
+      padding: ZERO,
     },
     header: {
       flexDirection: 'row',
