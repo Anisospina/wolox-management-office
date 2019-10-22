@@ -1,4 +1,4 @@
-import {mirage, catedBlue, gallery, white, bombay, outerSpace} from '@constants/colors';
+import {MIRAGE, CATEDBLUE, GALLERY, WHITE, BOMBAY, OUTERSPACE, CERULEAN} from '@constants/colors';
 import {refRatioScale, isIos} from '@constants/platform';
 import {
   MARGIN_HALF_PADDING,
@@ -13,8 +13,8 @@ const ZERO = refRatioScale(0);
 
 export const myTheme = {
   calendarBackground: 'transparent',
-  textDisabledColor: bombay,
-  todayTextColor: '#00adf5',
+  textDisabledColor: BOMBAY,
+  todayTextColor: CERULEAN,
   'stylesheet.day.period': {
     wrapper: {
       alignItems: 'center',
@@ -26,7 +26,7 @@ export const myTheme = {
       fontSize: fontSizes.SMALL,
       fontFamily: fontCera.REGULAR,
       fontWeight: fontWeights.NORMAL,
-      color: mirage,
+      color: MIRAGE,
       marginBottom: ZERO,
       paddingBottom: isIos ? ZERO : MARGIN_HALF_PADDING,
     },
@@ -38,7 +38,7 @@ export const myTheme = {
       justifyContent: 'space-around',
     },
     monthView: {
-      backgroundColor: white,
+      backgroundColor: WHITE,
       paddingHorizontal: refRatioScale(20),
       borderBottomLeftRadius: 10,
       borderBottomRightRadius: 10,
@@ -51,17 +51,17 @@ export const myTheme = {
       flexDirection: 'row',
       justifyContent: 'space-around',
       borderBottomWidth: 1,
-      borderBottomColor: gallery,
+      borderBottomColor: GALLERY,
       paddingHorizontal: refRatioScale(20),
       paddingVertical: refRatioScale(5),
-      backgroundColor: white,
+      backgroundColor: WHITE,
       borderTopLeftRadius: 10,
       borderTopRightRadius: 10,
     },
     dayHeader: {
       marginVertical: MARGIN_PADDING_12,
       width: SIZE_CIRCLE,
-      color: catedBlue,
+      color: CATEDBLUE,
       fontSize: fontSizes.XSMALL,
       textAlign: 'center',
       fontFamily: fontCera.REGULAR,
@@ -71,7 +71,7 @@ export const myTheme = {
       fontSize: fontSizes.MEDIUM,
       fontFamily: fontCera.REGULAR,
       fontWeight: fontWeights.SEMI_BOLD,
-      color: outerSpace,
+      color: OUTERSPACE,
       margin: ZERO,
       padding: 0,
     },

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import {Image} from 'react-native';
-import moment from 'moment';
-import {cerulean, white, bombay, malibu, lilyWhite} from '@constants/colors';
+import {CERULEAN, WHITE, BOMBAY, MALIBU, LILYWHITE} from '@constants/colors';
 import prevImg from '@assets/left.png';
 import nextImg from '@assets/right.png';
+import {addDate, DATE_NAMES, DEFAULT_LOCALE} from '@utils/date';
 
 import {Props, CalendarState} from './interfaceCalendar';
-import {DEFAULT_LOCALE, CONFIG_CALENDAR, FORMAT_DATE, PERIOD, VARIABLES, UNITS} from './constants';
+import {CONFIG_CALENDAR, VARIABLES} from './constants';
 import {myTheme} from './styles';
 
 LocaleConfig.locales[DEFAULT_LOCALE] = CONFIG_CALENDAR;
@@ -37,8 +37,8 @@ class CustomCalendar extends Component<Props, CalendarState> {
         startingDay: true,
         endingDay: true,
         selected: true,
-        color: malibu,
-        textColor: white,
+        color: MALIBU,
+        textColor: WHITE,
       },
     };
     this.setState({daysSelected});
@@ -48,17 +48,15 @@ class CustomCalendar extends Component<Props, CalendarState> {
     const {initialDate, finalDate} = this.state;
     if (initialDate && finalDate && finalDate > initialDate) {
       const daysSelected: any = {
-        [initialDate]: {startingDay: true, color: cerulean, textColor: white},
+        [initialDate]: {startingDay: true, color: CERULEAN, textColor: WHITE},
       };
       let currentDate: string;
       while (currentDate !== finalDate) {
         const date = currentDate || initialDate;
-        currentDate = moment(date)
-          .add(1, UNITS.days)
-          .format(FORMAT_DATE);
-        daysSelected[currentDate] = {selected: true, color: lilyWhite, textColor: malibu};
+        currentDate = addDate(date, 1, DATE_NAMES.DAYS);
+        daysSelected[currentDate] = {selected: true, color: LILYWHITE, textColor: MALIBU};
       }
-      daysSelected[finalDate] = {endingDay: true, color: cerulean, textColor: white};
+      daysSelected[finalDate] = {endingDay: true, color: CERULEAN, textColor: WHITE};
       this.setState({daysSelected});
     }
   };
@@ -72,7 +70,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
   renderArrow = direction => {
     return (
       <Image
-        style={{tintColor: bombay}}
+        style={{tintColor: BOMBAY}}
         resizeMode="contain"
         source={direction === VARIABLES.left ? prevImg : nextImg}
       />
@@ -81,12 +79,11 @@ class CustomCalendar extends Component<Props, CalendarState> {
 
   render() {
     const {daysSelected} = this.state;
-
     return (
       <Calendar
         onDayPress={this.handleClickModalFilter}
         markedDates={daysSelected}
-        markingType={PERIOD}
+        markingType={VARIABLES.period}
         theme={myTheme}
         renderArrow={this.renderArrow}
       />
