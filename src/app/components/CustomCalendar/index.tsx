@@ -67,15 +67,13 @@ class CustomCalendar extends Component<Props, CalendarState> {
     onAcceptDate({initialDate, finalDate});
   };
 
-  renderArrow = direction => {
-    return (
-      <Image
-        style={{tintColor: BOMBAY}}
-        resizeMode="contain"
-        source={direction === VARIABLES.left ? prevImg : nextImg}
-      />
-    );
-  };
+  renderArrow = direction => (
+    <Image
+      style={{tintColor: BOMBAY}}
+      resizeMode="contain"
+      source={direction === VARIABLES.left ? prevImg : nextImg}
+    />
+  );
 
   render() {
     const {daysSelected} = this.state;
