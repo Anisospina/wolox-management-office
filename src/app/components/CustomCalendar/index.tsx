@@ -17,7 +17,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
   state = {
     initialDate: null,
     finalDate: null,
-    daysSelected: null,
+    daysSelected: null
   };
 
   handleClickModalFilter = day => {
@@ -25,7 +25,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
     if (!initialDate || finalDate || day.dateString < initialDate) {
       this.setState(
         {initialDate: day.dateString, finalDate: null, daysSelected: null},
-        this.handleInitialDate,
+        this.handleInitialDate
       );
     } else this.setState({finalDate: day.dateString, daysSelected: null}, this.calculateRange);
   };
@@ -38,8 +38,8 @@ class CustomCalendar extends Component<Props, CalendarState> {
         endingDay: true,
         selected: true,
         color: MALIBU,
-        textColor: WHITE,
-      },
+        textColor: WHITE
+      }
     };
     this.setState({daysSelected});
   };
@@ -48,7 +48,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
     const {initialDate, finalDate} = this.state;
     if (initialDate && finalDate && finalDate > initialDate) {
       const daysSelected: any = {
-        [initialDate]: {startingDay: true, color: CERULEAN, textColor: WHITE},
+        [initialDate]: {startingDay: true, color: CERULEAN, textColor: WHITE}
       };
       let currentDate: string;
       while (currentDate !== finalDate) {

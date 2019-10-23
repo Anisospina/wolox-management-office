@@ -8,7 +8,7 @@ moment.locale(DEFAULT_LOCALE);
 const TIME_ZONE = process.env.REACT_APP_TIME_ZONE;
 
 export const DATE_NAMES = {
-  DAYS: 'days',
+  DAYS: 'days'
 };
 
 export const DATE_FORMAT = {
@@ -22,7 +22,7 @@ export const DATE_FORMAT = {
   MONTH_FULL_NAME: 'MMMM',
   MONTH_NUMBER: 'M',
   DAYS_SHORT_NAME: 'dd',
-  DAYS_NUMBER: 'E',
+  DAYS_NUMBER: 'E'
 };
 export const getDate = (dateTime, format = DATE_FORMAT.DATE) => moment.utc(dateTime).format(format);
 export const getTime = (dateTime, format = DATE_FORMAT.TIME) => moment.utc(dateTime).format(format);

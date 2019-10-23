@@ -6,14 +6,14 @@ import {
   BOMBAY,
   OUTERSPACE,
   CERULEAN,
-  TRANSPARENT,
+  TRANSPARENT
 } from '@constants/colors';
 import {refRatioScale, isIos} from '@constants/platform';
 import {
   MARGIN_HALF_PADDING,
   MARGIN_PADDING_12,
   MARGIN_PADDING_TRIPLE,
-  MARGIN_PADDING,
+  MARGIN_PADDING
 } from '@constants/dimensions';
 import {fontSizes, fontWeights, fontCera} from '@constants/fonts';
 
@@ -28,7 +28,7 @@ export const myTheme = {
     wrapper: {
       alignItems: 'center',
       alignSelf: 'stretch',
-      paddingBottom: refRatioScale(10),
+      paddingBottom: refRatioScale(10)
     },
     text: {
       marginTop: isIos ? MARGIN_PADDING : MARGIN_HALF_PADDING,
@@ -37,22 +37,22 @@ export const myTheme = {
       fontWeight: fontWeights.NORMAL,
       color: MIRAGE,
       marginBottom: ZERO,
-      paddingBottom: isIos ? ZERO : MARGIN_HALF_PADDING,
-    },
+      paddingBottom: isIos ? ZERO : MARGIN_HALF_PADDING
+    }
   },
   'stylesheet.calendar.main': {
     week: {
       marginVertical: ZERO,
       flexDirection: 'row',
-      justifyContent: 'space-around',
+      justifyContent: 'space-around'
     },
     monthView: {
       backgroundColor: WHITE,
       paddingHorizontal: refRatioScale(20),
       borderBottomLeftRadius: 10,
       borderBottomRightRadius: 10,
-      paddingVertical: refRatioScale(15),
-    },
+      paddingVertical: refRatioScale(15)
+    }
   },
   'stylesheet.calendar.header': {
     week: {
@@ -65,7 +65,7 @@ export const myTheme = {
       paddingVertical: refRatioScale(5),
       backgroundColor: WHITE,
       borderTopLeftRadius: 10,
-      borderTopRightRadius: 10,
+      borderTopRightRadius: 10
     },
     dayHeader: {
       marginVertical: MARGIN_PADDING_12,
@@ -74,7 +74,7 @@ export const myTheme = {
       fontSize: fontSizes.XSMALL,
       textAlign: 'center',
       fontFamily: fontCera.REGULAR,
-      fontWeight: fontWeights.SEMI_BOLD,
+      fontWeight: fontWeights.SEMI_BOLD
     },
     monthText: {
       fontSize: fontSizes.MEDIUM,
@@ -82,13 +82,13 @@ export const myTheme = {
       fontWeight: fontWeights.SEMI_BOLD,
       color: OUTERSPACE,
       margin: ZERO,
-      padding: ZERO,
+      padding: ZERO
     },
     header: {
       flexDirection: 'row',
       justifyContent: 'space-around',
       paddingVertical: refRatioScale(5),
-      alignItems: 'center',
-    },
-  },
+      alignItems: 'center'
+    }
+  }
 };
