@@ -5,8 +5,7 @@ export const CONFIG_CALENDAR = {
   dayNamesShort: getDayLetter()
 };
 
-export const VARIABLES = {
+export const CALENDAR_CONSTS = {
   left: 'left',
   period: 'period'
 };
-export const PERIOD = 'period';

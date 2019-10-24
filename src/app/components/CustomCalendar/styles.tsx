@@ -11,6 +11,8 @@ import {
 import {refRatioScale, isIos} from '@constants/platform';
 import {
   MARGIN_HALF_PADDING,
+  MARGIN_PADDING_DOUBLE,
+  MARGIN_PADDING_15,
   MARGIN_PADDING_12,
   MARGIN_PADDING_TRIPLE,
   MARGIN_PADDING
@@ -28,7 +30,7 @@ export const myTheme = {
     wrapper: {
       alignItems: 'center',
       alignSelf: 'stretch',
-      paddingBottom: refRatioScale(10)
+      paddingBottom: MARGIN_PADDING
     },
     text: {
       marginTop: isIos ? MARGIN_PADDING : MARGIN_HALF_PADDING,
@@ -48,10 +50,10 @@ export const myTheme = {
     },
     monthView: {
       backgroundColor: WHITE,
-      paddingHorizontal: refRatioScale(20),
-      borderBottomLeftRadius: 10,
-      borderBottomRightRadius: 10,
-      paddingVertical: refRatioScale(15)
+      paddingHorizontal: MARGIN_PADDING_DOUBLE,
+      borderBottomLeftRadius: MARGIN_PADDING,
+      borderBottomRightRadius: MARGIN_PADDING,
+      paddingVertical: MARGIN_PADDING_15
     }
   },
   'stylesheet.calendar.header': {
@@ -61,11 +63,11 @@ export const myTheme = {
       justifyContent: 'space-around',
       borderBottomWidth: 1,
       borderBottomColor: GALLERY,
-      paddingHorizontal: refRatioScale(20),
-      paddingVertical: refRatioScale(5),
+      paddingHorizontal: MARGIN_PADDING_DOUBLE,
+      paddingVertical: MARGIN_HALF_PADDING,
       backgroundColor: WHITE,
-      borderTopLeftRadius: 10,
-      borderTopRightRadius: 10
+      borderTopLeftRadius: MARGIN_PADDING,
+      borderTopRightRadius: MARGIN_PADDING
     },
     dayHeader: {
       marginVertical: MARGIN_PADDING_12,
@@ -87,7 +89,7 @@ export const myTheme = {
     header: {
       flexDirection: 'row',
       justifyContent: 'space-around',
-      paddingVertical: refRatioScale(5),
+      paddingVertical: MARGIN_HALF_PADDING,
       alignItems: 'center'
     }
   }

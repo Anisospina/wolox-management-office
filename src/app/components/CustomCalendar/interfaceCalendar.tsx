@@ -8,3 +8,11 @@ export interface Props {
   onAcceptDate: Function;
   selected: boolean;
 }
+
+export interface DayInterface {
+  dateString: string;
+  day: number;
+  month: number;
+  timestamp: number;
+  year: number;
+}

@@ -6,8 +6,8 @@ import prevImg from '@assets/left.png';
 import nextImg from '@assets/right.png';
 import {addDate, DATE_NAMES, DEFAULT_LOCALE} from '@utils/date';
 
-import {Props, CalendarState} from './interfaceCalendar';
-import {CONFIG_CALENDAR, VARIABLES} from './constants';
+import {Props, CalendarState, DayInterface} from './interfaceCalendar';
+import {CONFIG_CALENDAR, CALENDAR_CONSTS} from './constants';
 import {myTheme} from './styles';
 
 LocaleConfig.locales[DEFAULT_LOCALE] = CONFIG_CALENDAR;
@@ -20,7 +20,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
     daysSelected: null
   };
 
-  handleClickModalFilter = day => {
+  handleClickModalFilter = (day: DayInterface) => {
     const {initialDate, finalDate} = this.state;
     if (!initialDate || finalDate || day.dateString < initialDate) {
       this.setState(
@@ -71,7 +71,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
     <Image
       style={{tintColor: BOMBAY}}
       resizeMode="contain"
-      source={direction === VARIABLES.left ? prevImg : nextImg}
+      source={direction === CALENDAR_CONSTS.left ? prevImg : nextImg}
     />
   );
 
@@ -81,7 +81,7 @@ class CustomCalendar extends Component<Props, CalendarState> {
       <Calendar
         onDayPress={this.handleClickModalFilter}
         markedDates={daysSelected}
-        markingType={VARIABLES.period}
+        markingType={CALENDAR_CONSTS.period}
         theme={myTheme}
         renderArrow={this.renderArrow}
       />
