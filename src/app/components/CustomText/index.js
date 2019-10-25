@@ -1,14 +1,14 @@
-import React, { useCallback, memo } from 'react';
+import React, {useCallback, memo} from 'react';
 import PropTypes from 'prop-types';
-import { Text } from 'react-native';
-import { getCustomStyles } from '@utils/styleUtils';
+import {Text} from 'react-native';
+import {getCustomStyles} from '@utils/styleUtils';
 
 import styles from './styles';
 
 /*
-   ** You can add styles to Base like Family Font to be the Text styles base!
-   ** if you want to add a custom style, you need to add it here and in VARIANTS
-   */
+ ** You can add styles to Base like Family Font to be the Text styles base!
+ ** if you want to add a custom style, you need to add it here and in VARIANTS
+ */
 const VARIANTS = [
   'xxsmall',
   'xsmall',
@@ -21,13 +21,13 @@ const VARIANTS = [
   'white',
   'blue',
   'green',
-  'gray'
+  'gray',
 ];
 
 const CustomText = props => {
   const customStyles = useCallback(() => getCustomStyles(VARIANTS, props, styles), [props]);
 
-  const { textProps, style, children } = props;
+  const {textProps, style, children} = props;
   return (
     <Text {...textProps} style={[styles.base, customStyles(), style]}>
       {children}
@@ -36,12 +36,12 @@ const CustomText = props => {
 };
 
 CustomText.defaultProps = {
-  textProps: {}
+  textProps: {},
 };
 
 CustomText.propTypes = {
   children: PropTypes.node.isRequired,
-  textProps: PropTypes.shape({ ...Text.propTypes })
+  textProps: PropTypes.shape({...Text.propTypes}),
 };
 
 export default memo(CustomText);

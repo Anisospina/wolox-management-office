@@ -1,8 +1,8 @@
-import React, { useState, useCallback, memo } from 'react';
-import { View, TextInput, Text } from 'react-native';
+import React, {useState, useCallback, memo} from 'react';
+import {View, TextInput, Text} from 'react-native';
 import PropTypes from 'prop-types';
 import CustomText from '@components/CustomText';
-import { transparent } from '@constants/colors';
+import {transparent} from '@constants/colors';
 
 import ShowPassword from './components/ShowPassword';
 import styles from './styles';
@@ -26,7 +26,7 @@ const CustomTextInput = props => {
     textStyles,
     secureTextEntry,
     showEye,
-    autoCompleteType
+    autoCompleteType,
   } = props;
 
   const placeholderColor = value ? transparent : placeholderTextColor;
@@ -42,9 +42,8 @@ const CustomTextInput = props => {
         style={[
           multiline ? styles.multilineContainer : styles.container,
           bottomBorder && styles.bottomBorder,
-          style
-        ]}
-      >
+          style,
+        ]}>
         <TextInput
           {...props}
           allowFontScaling={false}
@@ -57,8 +56,9 @@ const CustomTextInput = props => {
           secureTextEntry={secureTextEntry && !showPassword}
           autoCompleteType={secureTextEntry ? 'off' : autoCompleteType}
         />
-        {secureTextEntry &&
-          showEye && <ShowPassword onShowPassword={handleShowPassword} passwordVisible={showPassword} />}
+        {secureTextEntry && showEye && (
+          <ShowPassword onShowPassword={handleShowPassword} passwordVisible={showPassword} />
+        )}
       </View>
     </>
   );
@@ -73,7 +73,7 @@ CustomTextInput.defaultProps = {
   keyboardType: 'default',
   multiline: false,
   bottomBorder: false,
-  maxHeight: 200
+  maxHeight: 200,
 };
 
 CustomTextInput.propTypes = {
@@ -97,7 +97,7 @@ CustomTextInput.propTypes = {
   showEye: PropTypes.bool,
   secureTextEntry: PropTypes.bool,
   title: PropTypes.string,
-  autoCompleteType: PropTypes.string
+  autoCompleteType: PropTypes.string,
 };
 
 export default memo(CustomTextInput);

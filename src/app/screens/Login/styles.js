@@ -1,11 +1,18 @@
-import { StyleSheet } from 'react-native';
-import { green, blue, transparent } from '@constants/colors';
+import {StyleSheet} from 'react-native';
+import {green, blue, transparent, aquaHaze} from '@constants/colors';
+import {
+  MARGIN_PADDING,
+  MARGIN_PADDING_DOUBLE,
+  MARGIN_PADDING_TRIPLE,
+  FORM_WIDTH
+} from '@constants/dimensions';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: aquaHaze
   },
   formElementContainer: {
     backgroundColor: transparent,
@@ -14,15 +21,13 @@ export default StyleSheet.create({
   },
   formElement: {
     padding: 3,
-    margin: 5,
-    backgroundColor: transparent,
-    height: 30,
-    width: 200
+    height: MARGIN_PADDING_TRIPLE,
+    width: FORM_WIDTH
   },
   formButton: {
     backgroundColor: green,
-    padding: 10,
+    padding: MARGIN_PADDING,
     borderRadius: 3,
-    margin: 20
+    margin: MARGIN_PADDING_DOUBLE
   }
 });

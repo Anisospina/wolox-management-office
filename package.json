@@ -5,6 +5,7 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
+    "build": "tsc",
     "lint": "eslint src",
     "coverage": "jest --coverage",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
@@ -15,18 +16,25 @@
     "test:watch": "jest --watch",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
     "lint-fix": "eslint src --fix",
-    "lint-diff": "git diff --name-only --cached --relative | grep \\.js$ | xargs eslint",
+    "lint-diff": "git diff --name-only --cached --relative | grep \\.ts.$ | xargs eslint",
     "precommit": "npm run lint-diff"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",
+    "@types/moment-timezone": "^0.5.12",
     "apisauce": "^1.1.0",
+    "change-case": "^3.1.0",
     "i18next": "^17.0.14",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
     "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-calendars": "^1.212.0",
     "react-native-config": "^0.11.7",
     "react-native-gesture-handler": "^1.4.1",
+    "react-native-i18n": "^2.0.15",
     "react-native-reanimated": "^1.2.0",
     "react-native-screens": "^2.0.0-alpha.3",
     "react-navigation": "^4.0.3",
@@ -49,6 +57,10 @@
     "@babel/core": "^7.6.0",
     "@babel/runtime": "^7.6.0",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@types/jest": "^24.0.19",
+    "@types/react": "^16.9.9",
+    "@types/react-native": "^0.60.21",
+    "@types/react-test-renderer": "^16.9.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-import-glob": "^2.0.0",
@@ -76,7 +88,8 @@
     "prettier-eslint": "^9.0.0",
     "react-native-mock-render": "^0.1.5",
     "react-test-renderer": "16.8.6",
-    "redux-mock-store": "^1.5.3"
+    "redux-mock-store": "^1.5.3",
+    "typescript": "^3.6.4"
   },
   "jest": {
     "preset": "react-native",
@@ -91,6 +104,11 @@
     ],
     "transformIgnorePatterns": [
       "/node_modules/@react-native-community/async-storage/(?!(lib))"
+    ]
+  },
+  "rnpm": {
+    "assets": [
+      "assets/fonts"
     ]
   }
 }
