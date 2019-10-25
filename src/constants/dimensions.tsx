@@ -18,10 +18,11 @@ export const MARGIN_PADDING_EIGHTH = refRatioScale(80);
 export const MARGIN_PADDING_NINE = refRatioScale(90);
 export const MARGIN_PADDING_TEN = refRatioScale(100);
 export const MARGIN_PADDING_150 = refRatioScale(150);
+export const MARGIN_PADDING_200 = refRatioScale(200);
 export const MARGIN_PADDING_250 = refRatioScale(250);
 
 export const GIF_SIZE = refRatioScale(290);
 export const IMG_SIZE = IS_SMALL_DEVICE ? refRatioScale(200) : MARGIN_PADDING_250;
 export const ICON_SIZE = MARGIN_PADDING_DOUBLE;
 export const EXTRA_HEIGHT_FORMS = MARGIN_PADDING;
-export const FORM_WIDTH = refRatioScale(200);
+export const FORM_WIDTH = MARGIN_PADDING_200;
