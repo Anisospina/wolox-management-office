@@ -24,3 +24,4 @@ export const GIF_SIZE = refRatioScale(290);
 export const IMG_SIZE = IS_SMALL_DEVICE ? refRatioScale(200) : MARGIN_PADDING_250;
 export const ICON_SIZE = MARGIN_PADDING_DOUBLE;
 export const EXTRA_HEIGHT_FORMS = MARGIN_PADDING;
+export const FORM_WIDTH = refRatioScale(200);

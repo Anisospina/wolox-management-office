@@ -1,7 +1,11 @@
 import {StyleSheet} from 'react-native';
 import {green, blue, transparent, aquaHaze} from '@constants/colors';
-import {refRatioScale} from '@constants/platform';
-import {MARGIN_PADDING, MARGIN_PADDING_DOUBLE} from '@constants/dimensions';
+import {
+  MARGIN_PADDING,
+  MARGIN_PADDING_DOUBLE,
+  MARGIN_PADDING_TRIPLE,
+  FORM_WIDTH
+} from '@constants/dimensions';
 
 export default StyleSheet.create({
   container: {
@@ -17,8 +21,8 @@ export default StyleSheet.create({
   },
   formElement: {
     padding: 3,
-    height: refRatioScale(30),
-    width: refRatioScale(200)
+    height: MARGIN_PADDING_TRIPLE,
+    width: FORM_WIDTH
   },
   formButton: {
     backgroundColor: green,
