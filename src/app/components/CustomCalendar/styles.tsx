@@ -20,7 +20,7 @@ import {
 import {fontSizes, fontWeights, fontCera} from '@constants/fonts';
 
 const SIZE_CIRCLE = isIos ? refRatioScale(34) : MARGIN_PADDING_TRIPLE;
-const ZERO = refRatioScale(0);
+const ZERO = 0;
 
 export const myTheme = {
   calendarBackground: TRANSPARENT,
@@ -58,7 +58,7 @@ export const myTheme = {
   },
   'stylesheet.calendar.header': {
     week: {
-      marginTop: 3,
+      marginTop: MARGIN_HALF_PADDING,
       flexDirection: 'row',
       justifyContent: 'space-around',
       borderBottomWidth: 1,
